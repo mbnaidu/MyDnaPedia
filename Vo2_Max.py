@@ -12,7 +12,7 @@ from openpyxl.styles import Font
 today = date.today()
 
 d4 = today.strftime("%d-%b-%Y")
-path = "C:\\Users\\MADHU\\Downloads\\project\\python\\VO2MAX\\Required Excel Sheet\\Sample data VO2MAX.xlsx"
+path = "D:\\Projects\\python\\VO2MAX\\Required Excel Sheet\\Sample data VO2MAX.xlsx"
 wb_obj = openpyxl.load_workbook(path)
 Sample_sheet = wb_obj["Sample data"]
 Points_Sheet = wb_obj["Points calc and intepretations"]
@@ -85,13 +85,13 @@ for users in range(5, Sample_Row + 1):
         buffer0.seek(0)
         newPdf0 = PdfFileReader(buffer0)
         existingPdf = PdfFileReader(open(
-            'C:\\Users\\MADHU\\Downloads\\project\\python\\VO2MAX\\Required Docs\\VO2MAX v2-pages-5.pdf', 'rb'))
+            'D:\\Projects\\python\\VO2MAX\\Required Docs\\VO2MAX v2-pages-5.pdf', 'rb'))
         output = PdfFileWriter()
         page = existingPdf.getPage(0)
         page.mergePage(newPdf0.getPage(0))
         output.addPage(page)
         outputStream = open(
-            'C:\\Users\\MADHU\\Downloads\\project\\python\\VO2MAX\\Required Docs\\changed_5th_Page.pdf', 'wb')
+            'D:\\Projects\\python\\VO2MAX\\Required Docs\\changed_5th_Page.pdf', 'wb')
         output.write(outputStream)
         outputStream.close()
         # ------------------------------ 5th page -------------------------------------
@@ -112,13 +112,13 @@ for users in range(5, Sample_Row + 1):
         buffer1.seek(0)
         newPdf1 = PdfFileReader(buffer1)
         existingPdf = PdfFileReader(open(
-            'C:\\Users\\MADHU\\Downloads\\project\\python\\VO2MAX\\Required Docs\\VO2MAX v2-pages-6.pdf', 'rb'))
+            'D:\\Projects\\python\\VO2MAX\\Required Docs\\VO2MAX v2-pages-6.pdf', 'rb'))
         output = PdfFileWriter()
         page = existingPdf.getPage(0)
         page.mergePage(newPdf1.getPage(0))
         output.addPage(page)
         outputStream = open(
-            'C:\\Users\\MADHU\\Downloads\\project\\python\\VO2MAX\\Required Docs\\changed_6th_Page.pdf', 'wb')
+            'D:\\Projects\\python\\VO2MAX\\Required Docs\\changed_6th_Page.pdf', 'wb')
         output.write(outputStream)
         outputStream.close()
         # ------------------------------ 6th page -------------------------------------
@@ -162,19 +162,19 @@ for users in range(5, Sample_Row + 1):
             p2.drawString(x=15, y=60, text="To counterbalance, take also light exercise where you can easily speak without getting out of breath. Endurance ")
             p2.drawString(x=15, y=50, text="sports may be natural to you because of your genetic trait, so you probably also enjoy it.")
         p2.drawImage(
-            'C:\\Users\\MADHU\\Downloads\\project\\python\\VO2MAX\\Required Docs\\green_marker.PNG', x=(points*8)+20, y=272, height=10, width=10)
+            'D:\\Projects\\python\\VO2MAX\\Required Docs\\green_marker.PNG', x=(points*8)+20, y=272, height=10, width=10)
         p2.showPage()
         p2.save()
         buffer2.seek(0)
         newPdf2 = PdfFileReader(buffer2)
         existingPdf = PdfFileReader(open(
-            'C:\\Users\\MADHU\\Downloads\\project\\python\\VO2MAX\\Required Docs\\VO2MAX v2-pages-7.pdf', 'rb'))
+            'D:\\Projects\\python\\VO2MAX\\Required Docs\\VO2MAX v2-pages-7.pdf', 'rb'))
         output = PdfFileWriter()
         page = existingPdf.getPage(0)
         page.mergePage(newPdf2.getPage(0))
         output.addPage(page)
         outputStream = open(
-            'C:\\Users\\MADHU\\Downloads\\project\\python\\VO2MAX\\Required Docs\\changed_7th_Page.pdf', 'wb')
+            'D:\\Projects\\python\\VO2MAX\\Required Docs\\changed_7th_Page.pdf', 'wb')
         output.write(outputStream)
         outputStream.close()
         # ------------------------------ 7th page -------------------------------------
@@ -214,14 +214,14 @@ for users in range(5, Sample_Row + 1):
             a2.font = ft
             a2.font = Font(color="00ee00")
             wb.save(path)
-            pdfs = ['C:\\Users\\MADHU\\Downloads\\project\\python\\VO2MAX\\Required Docs\\VO2MAX v2-pages-1.pdf', 'C:\\Users\\MADHU\\Downloads\\project\\python\\VO2MAX\\Required Docs\\VO2MAX v2-pages-2.pdf', 'C:\\Users\\MADHU\\Downloads\\project\\python\\VO2MAX\\Required Docs\\VO2MAX v2-pages-3.pdf',
-                    'C:\\Users\\MADHU\\Downloads\\project\\python\\VO2MAX\\Required Docs\\VO2MAX v2-pages-4.pdf',
-                    'C:\\Users\\MADHU\\Downloads\\project\\python\\VO2MAX\\Required Docs\\changed_5th_Page.pdf', 'C:\\Users\\MADHU\\Downloads\\project\\python\\VO2MAX\\Required Docs\\changed_6th_Page.pdf', 'C:\\Users\\MADHU\\Downloads\\project\\python\\VO2MAX\\Required Docs\\changed_7th_Page.pdf', 'C:\\Users\\MADHU\\Downloads\\project\\python\\VO2MAX\\Required Docs\\VO2MAX v2-pages-8.pdf', 'C:\\Users\\MADHU\\Downloads\\project\\python\\VO2MAX\\Required Docs\\VO2MAX v2-pages-9.pdf',
-                    'C:\\Users\\MADHU\\Downloads\\project\\python\\VO2MAX\\Required Docs\\VO2MAX v2-pages-10.pdf', 'C:\\Users\\MADHU\\Downloads\\project\\python\\VO2MAX\\Required Docs\\VO2MAX v2-pages-11.pdf', 'C:\\Users\\MADHU\\Downloads\\project\\python\\VO2MAX\\Required Docs\\VO2MAX v2-pages-12.pdf',]
+            pdfs = ['D:\\Projects\\python\\VO2MAX\\Required Docs\\VO2MAX v2-pages-1.pdf', 'D:\\Projects\\python\\VO2MAX\\Required Docs\\VO2MAX v2-pages-2.pdf', 'D:\\Projects\\python\\VO2MAX\\Required Docs\\VO2MAX v2-pages-3.pdf',
+                    'D:\\Projects\\python\\VO2MAX\\Required Docs\\VO2MAX v2-pages-4.pdf',
+                    'D:\\Projects\\python\\VO2MAX\\Required Docs\\changed_5th_Page.pdf', 'D:\\Projects\\python\\VO2MAX\\Required Docs\\changed_6th_Page.pdf', 'D:\\Projects\\python\\VO2MAX\\Required Docs\\changed_7th_Page.pdf', 'D:\\Projects\\python\\VO2MAX\\Required Docs\\VO2MAX v2-pages-8.pdf', 'D:\\Projects\\python\\VO2MAX\\Required Docs\\VO2MAX v2-pages-9.pdf',
+                    'D:\\Projects\\python\\VO2MAX\\Required Docs\\VO2MAX v2-pages-10.pdf', 'D:\\Projects\\python\\VO2MAX\\Required Docs\\VO2MAX v2-pages-11.pdf', 'D:\\Projects\\python\\VO2MAX\\Required Docs\\VO2MAX v2-pages-12.pdf',]
             merger = PdfFileMerger()
             for pdf in pdfs:
                 merger.append(pdf)
-                s = "C:\\Users\\MADHU\\Downloads\\project\\python\\VO2MAX\\Generated PDFS\\" + User_Name.value + " - " + d4 + "VO2MAX report.pdf"
+                s = "D:\\Projects\\python\\VO2MAX\\Generated PDFS\\" + User_Name.value + " - " + d4 + "VO2MAX report.pdf"
             pdfOutputFile = open(s, 'wb')
             merger.write(pdfOutputFile)
             pdfOutputFile.close()

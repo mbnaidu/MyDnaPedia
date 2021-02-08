@@ -15,7 +15,7 @@ today = date.today()
 d4 = today.strftime("%d-%b-%Y")
 
 # Excel File
-path = "C:\\Users\\MADHU\\Downloads\\project\\python\\FIT_DIET\\Required Excel Sheet\\Sample data FIT-DIET 27112020.xlsx"
+path = "D:\\Projects\\python\\FIT_DIET\\Required Excel Sheet\\Sample data FIT-DIET 27112020.xlsx"
 wb_obj = openpyxl.load_workbook(path)
 
 # Excel Sheets
@@ -236,7 +236,7 @@ for users in range(6, Sample_data__Row + 1):
         p.setFont('Helvetica', 7)
         # ------------ First Summary ------------------
         p.drawImage(
-            'C:\\Users\\MADHU\\Downloads\\project\\python\\FIT_DIET\\Required Docs\\skyblue_marker.PNG', x=(240 + (80 * summary_percentage[0]/100)), y=291, height=10, width=10)
+            'D:\\Projects\\python\\FIT_DIET\\Required Docs\\skyblue_marker.PNG', x=(240 + (80 * summary_percentage[0]/100)), y=291, height=10, width=10)
         if summary_percentage[0] == 0 or summary_percentage[0] == 20:
             p.drawString(x=240, y=315, text="Your muscles may get tired easily and ")
             p.drawString(x=240, y=305, text="they require longer recovery time.")
@@ -252,7 +252,7 @@ for users in range(6, Sample_data__Row + 1):
             p.drawString(x=240, y=245, text="they require longer recovery time.")
             # p.drawString(x=70, y=173, text="longer", mode=None,charSpace=0, direction=None, wordSpace=None)
         p.drawImage(
-            'C:\\Users\\MADHU\\Downloads\\project\\python\\FIT_DIET\\Required Docs\\green_marker.PNG', x=(240 + (80 * summary_percentage[1]/100)), y=230, height=10, width=10)
+            'D:\\Projects\\python\\FIT_DIET\\Required Docs\\green_marker.PNG', x=(240 + (80 * summary_percentage[1]/100)), y=230, height=10, width=10)
         # ------------ Second Summary -----------------
         # ------------ Third Summary -----------------
         if summary_percentage[2] == 20:
@@ -263,7 +263,7 @@ for users in range(6, Sample_data__Row + 1):
         if summary_percentage[2] == 100:
             p.drawString(x=240, y=183, text="You can easily improve your aerobic fitness.")
         p.drawImage(
-            'C:\\Users\\MADHU\\Downloads\\project\\python\\FIT_DIET\\Required Docs\\purple_marker.PNG', x=(240 + (80 * summary_percentage[2]/100)), y=168, height=10, width=10)
+            'D:\\Projects\\python\\FIT_DIET\\Required Docs\\purple_marker.PNG', x=(240 + (80 * summary_percentage[2]/100)), y=168, height=10, width=10)
         # ------------ Third Summary -----------------
         # ------------ Fourth Summary -----------------
         if summary_percentage[3] == 20:
@@ -272,11 +272,11 @@ for users in range(6, Sample_data__Row + 1):
             p.drawString(x=230, y=123, text="You can easily improve your maximal oxygen uptake.")
         if summary_percentage[3] == 100:
             p.drawString(x=230, y=123, text="You can easily improve your maximal oxygen uptake.")
-        p.drawImage('C:\\Users\\MADHU\\Downloads\\project\\python\\FIT_DIET\\Required Docs\\yellow_marker.PNG', x=(240 + (80 * summary_percentage[3]/100)), y=107, height=10, width=10)
+        p.drawImage('D:\\Projects\\python\\FIT_DIET\\Required Docs\\yellow_marker.PNG', x=(240 + (80 * summary_percentage[3]/100)), y=107, height=10, width=10)
         # ------------ Fourth Summary -----------------
         # ------------ Fifth Summary -----------------
         p.drawString(x=230, y=60, text=summary_texts[4])
-        p.drawImage('C:\\Users\\MADHU\\Downloads\\project\\python\\FIT_DIET\\Required Docs\\red_marker.PNG', x=(240 + (80 * summary_percentage[4]/100)), y=44, height=10, width=10)
+        p.drawImage('D:\\Projects\\python\\FIT_DIET\\Required Docs\\red_marker.PNG', x=(240 + (80 * summary_percentage[4]/100)), y=44, height=10, width=10)
         # ------------ Fifth Summary -----------------
         # ------------ Sixth Summary -----------------
         for i in range(5, 12):
@@ -298,12 +298,12 @@ for users in range(6, Sample_data__Row + 1):
         p.save()
         buffer.seek(0)
         newPdf = PdfFileReader(buffer)
-        existingPdf = PdfFileReader(open('C:\\Users\\MADHU\\Downloads\\project\\python\\FIT_DIET\\Required Docs\\FIT-DIET_5.pdf', 'rb'))
+        existingPdf = PdfFileReader(open('D:\\Projects\\python\\FIT_DIET\\Required Docs\\FIT-DIET_5.pdf', 'rb'))
         output = PdfFileWriter()
         page = existingPdf.getPage(0)
         page.mergePage(newPdf.getPage(0))
         output.addPage(page)
-        outputStream = open('C:\\Users\\MADHU\\Downloads\\project\\python\\FIT_DIET\\Required Docs\\changed_5th_Page.pdf', 'wb')
+        outputStream = open('D:\\Projects\\python\\FIT_DIET\\Required Docs\\changed_5th_Page.pdf', 'wb')
         output.write(outputStream)
         outputStream.close()
         # ------------------ 5th Page --------------------------------------
@@ -323,12 +323,12 @@ for users in range(6, Sample_data__Row + 1):
         p1.save()
         buffer1.seek(0)
         newPdf1 = PdfFileReader(buffer1)
-        existingPdf = PdfFileReader(open('C:\\Users\\MADHU\\Downloads\\project\\python\\FIT_DIET\\Required Docs\\FIT-DIET_6.pdf', 'rb'))
+        existingPdf = PdfFileReader(open('D:\\Projects\\python\\FIT_DIET\\Required Docs\\FIT-DIET_6.pdf', 'rb'))
         output = PdfFileWriter()
         page = existingPdf.getPage(0)
         page.mergePage(newPdf1.getPage(0))
         output.addPage(page)
-        outputStream = open('C:\\Users\\MADHU\\Downloads\\project\\python\\FIT_DIET\\Required Docs\\changed_6th_Page.pdf', 'wb')
+        outputStream = open('D:\\Projects\\python\\FIT_DIET\\Required Docs\\changed_6th_Page.pdf', 'wb')
         output.write(outputStream)
         outputStream.close()
         # ------------------ 6th Page ---------------------------------------
@@ -358,12 +358,12 @@ for users in range(6, Sample_data__Row + 1):
         p2.save()
         buffer2.seek(0)
         newPdf2 = PdfFileReader(buffer2)
-        existingPdf = PdfFileReader(open('C:\\Users\\MADHU\\Downloads\\project\\python\\FIT_DIET\\Required Docs\\FIT-DIET_7.pdf', 'rb'))
+        existingPdf = PdfFileReader(open('D:\\Projects\\python\\FIT_DIET\\Required Docs\\FIT-DIET_7.pdf', 'rb'))
         output = PdfFileWriter()
         page = existingPdf.getPage(0)
         page.mergePage(newPdf2.getPage(0))
         output.addPage(page)
-        outputStream = open('C:\\Users\\MADHU\\Downloads\\project\\python\\FIT_DIET\\Required Docs\\changed_7th_Page.pdf', 'wb')
+        outputStream = open('D:\\Projects\\python\\FIT_DIET\\Required Docs\\changed_7th_Page.pdf', 'wb')
         output.write(outputStream)
         outputStream.close()
         # ------------------ 7th Page ---------------------------------------
@@ -400,12 +400,12 @@ for users in range(6, Sample_data__Row + 1):
         p3.save()
         buffer3.seek(0)
         newPdf3 = PdfFileReader(buffer3)
-        existingPdf = PdfFileReader(open('C:\\Users\\MADHU\\Downloads\\project\\python\\FIT_DIET\\Required Docs\\FIT-DIET_8.pdf', 'rb'))
+        existingPdf = PdfFileReader(open('D:\\Projects\\python\\FIT_DIET\\Required Docs\\FIT-DIET_8.pdf', 'rb'))
         output = PdfFileWriter()
         page = existingPdf.getPage(0)
         page.mergePage(newPdf3.getPage(0))
         output.addPage(page)
-        outputStream = open('C:\\Users\\MADHU\\Downloads\\project\\python\\FIT_DIET\\Required Docs\\changed_8th_Page.pdf', 'wb')
+        outputStream = open('D:\\Projects\\python\\FIT_DIET\\Required Docs\\changed_8th_Page.pdf', 'wb')
         output.write(outputStream)
         outputStream.close()
         # ------------------ 8th Page ---------------------------------------
@@ -447,12 +447,12 @@ for users in range(6, Sample_data__Row + 1):
         p4.save()
         buffer4.seek(0)
         newPdf4 = PdfFileReader(buffer4)
-        existingPdf = PdfFileReader(open('C:\\Users\\MADHU\\Downloads\\project\\python\\FIT_DIET\\Required Docs\\FIT-DIET_9.pdf', 'rb'))
+        existingPdf = PdfFileReader(open('D:\\Projects\\python\\FIT_DIET\\Required Docs\\FIT-DIET_9.pdf', 'rb'))
         output = PdfFileWriter()
         page = existingPdf.getPage(0)
         page.mergePage(newPdf4.getPage(0))
         output.addPage(page)
-        outputStream = open('C:\\Users\\MADHU\\Downloads\\project\\python\\FIT_DIET\\Required Docs\\changed_9th_Page.pdf', 'wb')
+        outputStream = open('D:\\Projects\\python\\FIT_DIET\\Required Docs\\changed_9th_Page.pdf', 'wb')
         output.write(outputStream)
         outputStream.close()
         # ------------------ 9th Page ---------------------------------------
@@ -487,12 +487,12 @@ for users in range(6, Sample_data__Row + 1):
         p5.save()
         buffer5.seek(0)
         newPdf5 = PdfFileReader(buffer5)
-        existingPdf = PdfFileReader(open('C:\\Users\\MADHU\\Downloads\\project\\python\\FIT_DIET\\Required Docs\\FIT-DIET_10.pdf', 'rb'))
+        existingPdf = PdfFileReader(open('D:\\Projects\\python\\FIT_DIET\\Required Docs\\FIT-DIET_10.pdf', 'rb'))
         output = PdfFileWriter()
         page = existingPdf.getPage(0)
         page.mergePage(newPdf5.getPage(0))
         output.addPage(page)
-        outputStream = open('C:\\Users\\MADHU\\Downloads\\project\\python\\FIT_DIET\\Required Docs\\changed_10th_Page.pdf', 'wb')
+        outputStream = open('D:\\Projects\\python\\FIT_DIET\\Required Docs\\changed_10th_Page.pdf', 'wb')
         output.write(outputStream)
         outputStream.close()
         # ------------------ 10th Page ---------------------------------------
@@ -543,25 +543,25 @@ for users in range(6, Sample_data__Row + 1):
         p6.save()
         buffer6.seek(0)
         newPdf6 = PdfFileReader(buffer6)
-        existingPdf = PdfFileReader(open('C:\\Users\\MADHU\\Downloads\\project\\python\\FIT_DIET\\Required Docs\\FIT-DIET_11.pdf', 'rb'))
+        existingPdf = PdfFileReader(open('D:\\Projects\\python\\FIT_DIET\\Required Docs\\FIT-DIET_11.pdf', 'rb'))
         output = PdfFileWriter()
         page = existingPdf.getPage(0)
         page.mergePage(newPdf6.getPage(0))
         output.addPage(page)
-        outputStream = open('C:\\Users\\MADHU\\Downloads\\project\\python\\FIT_DIET\\Required Docs\\changed_11th_Page.pdf', 'wb')
+        outputStream = open('D:\\Projects\\python\\FIT_DIET\\Required Docs\\changed_11th_Page.pdf', 'wb')
         output.write(outputStream)
         outputStream.close()
         # ------------------ 11th Page ---------------------------------------
-        pdfs = ['C:\\Users\\MADHU\\Downloads\\project\\python\\FIT_DIET\\Required Docs\\FIT-DIET_1.pdf', 'C:\\Users\\MADHU\\Downloads\\project\\python\\FIT_DIET\\Required Docs\\FIT-DIET_2.pdf', 'C:\\Users\\MADHU\\Downloads\\project\\python\\FIT_DIET\\Required Docs\\FIT-DIET_3.pdf',
-                'C:\\Users\\MADHU\\Downloads\\project\\python\\FIT_DIET\\Required Docs\\FIT-DIET_4.pdf',
-                'C:\\Users\\MADHU\\Downloads\\project\\python\\FIT_DIET\\Required Docs\\changed_5th_Page.pdf', 'C:\\Users\\MADHU\\Downloads\\project\\python\\FIT_DIET\\Required Docs\\changed_6th_Page.pdf', 'C:\\Users\\MADHU\\Downloads\\project\\python\\FIT_DIET\\Required Docs\\changed_7th_Page.pdf', 'C:\\Users\\MADHU\\Downloads\\project\\python\\FIT_DIET\\Required Docs\\changed_8th_Page.pdf', 'C:\\Users\\MADHU\\Downloads\\project\\python\\FIT_DIET\\Required Docs\\changed_9th_Page.pdf',
-                'C:\\Users\\MADHU\\Downloads\\project\\python\\FIT_DIET\\Required Docs\\changed_10th_Page.pdf', 'C:\\Users\\MADHU\\Downloads\\project\\python\\FIT_DIET\\Required Docs\\changed_11th_Page.pdf', 'C:\\Users\\MADHU\\Downloads\\project\\python\\FIT_DIET\\Required Docs\\FIT-DIET_12.pdf',
-                'C:\\Users\\MADHU\\Downloads\\project\\python\\FIT_DIET\\Required Docs\\FIT-DIET_13.pdf', 'C:\\Users\\MADHU\\Downloads\\project\\python\\FIT_DIET\\Required Docs\\FIT-DIET_14.pdf', 'C:\\Users\\MADHU\\Downloads\\project\\python\\FIT_DIET\\Required Docs\\FIT-DIET_15.pdf', 'C:\\Users\\MADHU\\Downloads\\project\\python\\FIT_DIET\\Required Docs\\FIT-DIET_16.pdf']
+        pdfs = ['D:\\Projects\\python\\FIT_DIET\\Required Docs\\FIT-DIET_1.pdf', 'D:\\Projects\\python\\FIT_DIET\\Required Docs\\FIT-DIET_2.pdf', 'D:\\Projects\\python\\FIT_DIET\\Required Docs\\FIT-DIET_3.pdf',
+                'D:\\Projects\\python\\FIT_DIET\\Required Docs\\FIT-DIET_4.pdf',
+                'D:\\Projects\\python\\FIT_DIET\\Required Docs\\changed_5th_Page.pdf', 'D:\\Projects\\python\\FIT_DIET\\Required Docs\\changed_6th_Page.pdf', 'D:\\Projects\\python\\FIT_DIET\\Required Docs\\changed_7th_Page.pdf', 'D:\\Projects\\python\\FIT_DIET\\Required Docs\\changed_8th_Page.pdf', 'D:\\Projects\\python\\FIT_DIET\\Required Docs\\changed_9th_Page.pdf',
+                'D:\\Projects\\python\\FIT_DIET\\Required Docs\\changed_10th_Page.pdf', 'D:\\Projects\\python\\FIT_DIET\\Required Docs\\changed_11th_Page.pdf', 'D:\\Projects\\python\\FIT_DIET\\Required Docs\\FIT-DIET_12.pdf',
+                'D:\\Projects\\python\\FIT_DIET\\Required Docs\\FIT-DIET_13.pdf', 'D:\\Projects\\python\\FIT_DIET\\Required Docs\\FIT-DIET_14.pdf', 'D:\\Projects\\python\\FIT_DIET\\Required Docs\\FIT-DIET_15.pdf', 'D:\\Projects\\python\\FIT_DIET\\Required Docs\\FIT-DIET_16.pdf']
         merger = PdfFileMerger()
         for pdf in pdfs:
             merger.append(pdf)
-        s = "C:\\Users\\MADHU\\Downloads\\project\\python\\FIT_DIET\\Generated PDFS\\" + User_Name.value + " - " + d4 + " - FIT_DIET report.pdf"
-        filename = "C:\\Users\\MADHU\\Downloads\\project\\python\\FIT_DIET\\Required Excel Sheet\\Sample data FIT-DIET 27112020.xlsx"
+        s = "D:\\Projects\\python\\FIT_DIET\\Generated PDFS\\" + User_Name.value + " - " + d4 + " - FIT_DIET report.pdf"
+        filename = "D:\\Projects\\python\\FIT_DIET\\Required Excel Sheet\\Sample data FIT-DIET 27112020.xlsx"
         wb = load_workbook(filename)
         ws = wb.worksheets[0]
         ws_tables = [0]
@@ -578,4 +578,4 @@ for users in range(6, Sample_data__Row + 1):
         pdfOutputFile.close()
         wb.save(filename)
         merger.close()
-# h
+# hi
